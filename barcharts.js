@@ -6,7 +6,12 @@ function barcharts() {
 
     var d1;
     var allGroup = ["Confirmed", "Active", "Recovered", "Deceased"]
-    var sel = div2.append('div').attr("id", "#selectButton1").append("select").attr("id", "#selectButton")
+    var sel = div2.append('div').attr("id", "#selectDiv1")
+    .append("p").text("Graph : ")
+    .append("select").attr("id", "#selectButton")
+
+    var selScale = div2.append('div').attr("id", "#selectDiv2")
+    .append("p").text("Scale : ").append("select").attr("id", "#selectButton2")
 
     sel.selectAll('myOptions')
             .data(allGroup)
@@ -14,6 +19,13 @@ function barcharts() {
             .append('option')
         .text(function (d) { return d; })
         .attr("value", function (d) { return d; }) 
+
+        selScale.selectAll('myOptions')
+        .data(["Linear Scale","Log Scale"])
+    .enter()
+        .append('option')
+    .text(function (d) { return d; })
+    .attr("value", function (d) { return d; }) 
         
 
     d3.selectAll("#svg1").selectAll("*").remove();
@@ -28,15 +40,16 @@ function barcharts() {
         .attr("width", "70px")			
         .style("opacity", 0);
 
+    var data;
+    var grp;
+    var linearScale = true;
     d3.json("data.json", function(error, d) {
         d1 = d.cases_time_series;
-        var data = d1.map(function(d) {return {"value": d.dailyconfirmed, "key": d.date};})
-        var grp = "Confirmed";
+        data = d1.map(function(d) {return {"value": d.dailyconfirmed, "key": d.date};})
+        grp = "Confirmed";
         updateBar(data, grp)
     }); 
-    var linearScale = false;
-    
-    
+        
     function updateBar(data, grp) {
         base = linearScale?0:1;
         div2.selectAll('svg').remove();
@@ -122,13 +135,22 @@ function barcharts() {
     sel.on('change', function() {
         console.log("here1")    
         var selectedOption = d3.select(this).property("value")
-        var data ;
         console.log("select" + selectedOption);
         if(selectedOption == 'Confirmed') data = d1.map(function(d) {return {"value": parseInt(d.dailyconfirmed), "key": d.date};});
         if(selectedOption == 'Active') data = d1.map(function(d) {return {"value": parseInt(d.dailyconfirmed) - parseInt(d.dailyrecovered), "key": d.date};});
         if(selectedOption == 'Recovered') data = d1.map(function(d) {return {"value": parseInt(d.dailyrecovered), "key": d.date};});
         if(selectedOption == 'Deceased') data = d1.map(function(d) {return {"value": parseInt(d.dailydeceased), "key": d.date};});
-        updateBar(data, selectedOption)
+        grp = selectedOption;
+        updateBar(data, grp)
+    });
+
+    selScale.on('change', function() {
+        console.log("here1")    
+        var selectedOption = d3.select(this).property("value")
+        console.log("select" + selectedOption);
+        if(selectedOption == 'Log Scale') linearScale = false;
+        else linearScale = true;
+        updateBar(data, grp)
     });
     
 }   
