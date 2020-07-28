@@ -3,8 +3,10 @@
 
 <head>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="cluster.js" charset="utf-8"></script>
 <script src="barcharts.js" charset="utf-8"></script>
+<script src="map.js" charset="utf-8"></script>
 </head>
 
 <style>
@@ -77,6 +79,29 @@ li a {
 li a:hover {
   background-color: #111;
 }
+#india {
+      /*    fill: #00BCD4;
+      opacity: .7; */
+      stroke: #101010;
+      stroke-width: .6;
+    }
+
+    .key path {
+        display: none;
+    }
+
+    .key line {
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .key text {
+        font-size: 10px;
+    }
+
+    .key rect{
+      stroke-width: .4;
+    }
 
 
   /* #svg1 {
@@ -102,6 +127,7 @@ li a:hover {
 <div>
 <ul>
   <li><a onclick="barcharts()">Confirmed</a></li>
+  <li><a onclick="mapp()">Map</a></li>
   <li><a onclick="showClusters()">Cluster</a></li>
 </ul>
 </div>
@@ -112,6 +138,7 @@ li a:hover {
   <br/><br/><br/><br/>
 </div>
 
+<script>barcharts()</script>
 </body>
 
 </html>

@@ -1614,23 +1614,9 @@
 	],
 	"statewise": [
 		{
-			"active": "495283",
-			"confirmed": "1474685",
-			"deaths": "33358",
-			"deltaconfirmed": "38666",
-			"deltadeaths": "546",
-			"deltarecovered": "26887",
-			"lastupdatedtime": "27/07/2020 20:14:24",
-			"migratedother": "422",
-			"recovered": "945622",
-			"state": "Total",
-			"statecode": "TT",
-			"statenotes": ""
-		},
-		{
 			"active": "147592",
 			"confirmed": "383723",
-			"deaths": "13883",
+			"deceased": "13883",
 			"deltaconfirmed": "7924",
 			"deltadeaths": "227",
 			"deltarecovered": "8706",
@@ -1644,7 +1630,7 @@
 		{
 			"active": "54896",
 			"confirmed": "220716",
-			"deaths": "3571",
+			"deceased": "3571",
 			"deltaconfirmed": "6993",
 			"deltadeaths": "77",
 			"deltarecovered": "5723",
@@ -1658,7 +1644,7 @@
 		{
 			"active": "10994",
 			"confirmed": "131219",
-			"deaths": "3853",
+			"deceased": "3853",
 			"deltaconfirmed": "613",
 			"deltadeaths": "26",
 			"deltarecovered": "1497",
@@ -1672,7 +1658,7 @@
 		{
 			"active": "61818",
 			"confirmed": "101465",
-			"deaths": "1953",
+			"deceased": "1953",
 			"deltaconfirmed": "5324",
 			"deltadeaths": "73",
 			"deltarecovered": "1847",
@@ -1686,7 +1672,7 @@
 		{
 			"active": "51701",
 			"confirmed": "102349",
-			"deaths": "1090",
+			"deceased": "1090",
 			"deltaconfirmed": "6051",
 			"deltadeaths": "49",
 			"deltarecovered": "3257",
@@ -1700,7 +1686,7 @@
 		{
 			"active": "26204",
 			"confirmed": "70493",
-			"deaths": "1456",
+			"deceased": "1456",
 			"deltaconfirmed": "3505",
 			"deltadeaths": "30",
 			"deltarecovered": "1192",
@@ -1714,7 +1700,7 @@
 		{
 			"active": "13033",
 			"confirmed": "55822",
-			"deaths": "2322",
+			"deceased": "2322",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -1728,7 +1714,7 @@
 		{
 			"active": "19595",
 			"confirmed": "58718",
-			"deaths": "1372",
+			"deceased": "1372",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -1742,7 +1728,7 @@
 		{
 			"active": "12955",
 			"confirmed": "55532",
-			"deaths": "471",
+			"deceased": "471",
 			"deltaconfirmed": "1473",
 			"deltadeaths": "8",
 			"deltarecovered": "774",
@@ -1756,7 +1742,7 @@
 		{
 			"active": "10124",
 			"confirmed": "36878",
-			"deaths": "631",
+			"deceased": "631",
 			"deltaconfirmed": "448",
 			"deltadeaths": "7",
 			"deltarecovered": "169",
@@ -1770,7 +1756,7 @@
 		{
 			"active": "13011",
 			"confirmed": "41111",
-			"deaths": "255",
+			"deceased": "255",
 			"deltaconfirmed": "2192",
 			"deltadeaths": "6",
 			"deltarecovered": "1536",
@@ -1784,7 +1770,7 @@
 		{
 			"active": "6556",
 			"confirmed": "31332",
-			"deaths": "392",
+			"deceased": "392",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -1798,7 +1784,7 @@
 		{
 			"active": "8099",
 			"confirmed": "32229",
-			"deaths": "86",
+			"deceased": "86",
 			"deltaconfirmed": "0",
 			"deltadeaths": "7",
 			"deltarecovered": "0",
@@ -1812,7 +1798,7 @@
 		{
 			"active": "7978",
 			"confirmed": "28589",
-			"deaths": "820",
+			"deceased": "820",
 			"deltaconfirmed": "789",
 			"deltadeaths": "9",
 			"deltarecovered": "659",
@@ -1826,7 +1812,7 @@
 		{
 			"active": "9918",
 			"confirmed": "26892",
-			"deaths": "181",
+			"deceased": "181",
 			"deltaconfirmed": "1503",
 			"deltadeaths": "7",
 			"deltarecovered": "0",
@@ -1840,7 +1826,7 @@
 		{
 			"active": "7667",
 			"confirmed": "18390",
-			"deaths": "321",
+			"deceased": "321",
 			"deltaconfirmed": "470",
 			"deltadeaths": "9",
 			"deltarecovered": "474",
@@ -1854,7 +1840,7 @@
 		{
 			"active": "9609",
 			"confirmed": "19728",
-			"deaths": "64",
+			"deceased": "64",
 			"deltaconfirmed": "702",
 			"deltadeaths": "2",
 			"deltarecovered": "745",
@@ -1868,7 +1854,7 @@
 		{
 			"active": "4102",
 			"confirmed": "13218",
-			"deaths": "306",
+			"deceased": "306",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -1882,7 +1868,7 @@
 		{
 			"active": "4689",
 			"confirmed": "8479",
-			"deaths": "86",
+			"deceased": "86",
 			"deltaconfirmed": "130",
 			"deltadeaths": "3",
 			"deltarecovered": "0",
@@ -1896,7 +1882,7 @@
 		{
 			"active": "2626",
 			"confirmed": "7613",
-			"deaths": "43",
+			"deceased": "43",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -1910,7 +1896,7 @@
 		{
 			"active": "2437",
 			"confirmed": "6104",
-			"deaths": "63",
+			"deceased": "63",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -1924,7 +1910,7 @@
 		{
 			"active": "1673",
 			"confirmed": "5119",
-			"deaths": "36",
+			"deceased": "36",
 			"deltaconfirmed": "258",
 			"deltadeaths": "1",
 			"deltarecovered": "133",
@@ -1938,7 +1924,7 @@
 		{
 			"active": "1526",
 			"confirmed": "3919",
-			"deaths": "13",
+			"deceased": "13",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -1952,7 +1938,7 @@
 		{
 			"active": "1108",
 			"confirmed": "2872",
-			"deaths": "43",
+			"deceased": "43",
 			"deltaconfirmed": "85",
 			"deltadeaths": "3",
 			"deltarecovered": "76",
@@ -1966,7 +1952,7 @@
 		{
 			"active": "714",
 			"confirmed": "2235",
-			"deaths": "0",
+			"deceased": "0",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -1980,7 +1966,7 @@
 		{
 			"active": "996",
 			"confirmed": "2231",
-			"deaths": "13",
+			"deceased": "13",
 			"deltaconfirmed": "55",
 			"deltadeaths": "0",
 			"deltarecovered": "9",
@@ -1994,7 +1980,7 @@
 		{
 			"active": "236",
 			"confirmed": "1306",
-			"deaths": "4",
+			"deceased": "4",
 			"deltaconfirmed": "21",
 			"deltadeaths": "0",
 			"deltarecovered": "3",
@@ -2008,7 +1994,7 @@
 		{
 			"active": "811",
 			"confirmed": "1385",
-			"deaths": "5",
+			"deceased": "5",
 			"deltaconfirmed": "46",
 			"deltadeaths": "1",
 			"deltarecovered": "20",
@@ -2022,7 +2008,7 @@
 		{
 			"active": "650",
 			"confirmed": "1158",
-			"deaths": "3",
+			"deceased": "3",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -2036,7 +2022,7 @@
 		{
 			"active": "320",
 			"confirmed": "910",
-			"deaths": "14",
+			"deceased": "14",
 			"deltaconfirmed": "23",
 			"deltadeaths": "1",
 			"deltarecovered": "4",
@@ -2050,7 +2036,7 @@
 		{
 			"active": "386",
 			"confirmed": "986",
-			"deaths": "2",
+			"deceased": "2",
 			"deltaconfirmed": "36",
 			"deltadeaths": "0",
 			"deltarecovered": "23",
@@ -2064,7 +2050,7 @@
 		{
 			"active": "543",
 			"confirmed": "721",
-			"deaths": "5",
+			"deceased": "5",
 			"deltaconfirmed": "19",
 			"deltadeaths": "0",
 			"deltarecovered": "38",
@@ -2078,7 +2064,7 @@
 		{
 			"active": "397",
 			"confirmed": "558",
-			"deaths": "1",
+			"deceased": "1",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -2092,7 +2078,7 @@
 		{
 			"active": "178",
 			"confirmed": "361",
-			"deaths": "0",
+			"deceased": "0",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -2106,7 +2092,7 @@
 		{
 			"active": "141",
 			"confirmed": "324",
-			"deaths": "0",
+			"deceased": "0",
 			"deltaconfirmed": "6",
 			"deltadeaths": "0",
 			"deltarecovered": "2",
@@ -2120,7 +2106,7 @@
 		{
 			"active": "0",
 			"confirmed": "0",
-			"deaths": "0",
+			"deceased": "0",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
@@ -2134,7 +2120,7 @@
 		{
 			"active": "0",
 			"confirmed": "0",
-			"deaths": "0",
+			"deceased": "0",
 			"deltaconfirmed": "0",
 			"deltadeaths": "0",
 			"deltarecovered": "0",
