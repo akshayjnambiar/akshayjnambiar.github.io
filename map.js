@@ -101,9 +101,24 @@ function updateMap(data, grp) {
         .attr("d", path)
         .style("fill", colors[0])
         .style("opacity", 0.5)
+        .on("mouseover", function(d) {		
+            div.transition()		
+                .duration(200)		
+                .style("opacity", 1);		
+            div.html("<table> <tr><td> State : </td><td>" + (!d.id ? "NA" : d.id) + "</td></tr>" + 
+            "<tr><td>"+ grp + " : </td><td>" + (!stateMap[d.id] ? "NA" : stateMap[d.id][grp]) + "</td></tr><table>")	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");	
+            })					  
+            .on("mouseout", function(d) {		    
+                    div.transition()		  
+                        .duration(200)		
+                        .style("opacity", 0);	  
+            });
 
-        india.selectAll("path").transition().duration(100)
-        .style("fill", function (d) { console.log(stateMap[d.id] + " " + stateMap[d.id]); return stateMap[d.id] ? colorScale(parseInt(stateMap[d.id][grp])) : colorScale(0); });
+        india.selectAll("path").transition().duration(500)
+        .style("fill", function (d) { console.log(stateMap[d.id] + " " + stateMap[d.id]); return stateMap[d.id] ? colorScale(parseInt(stateMap[d.id][grp])) : colorScale(0); })
+        
 
         
         var g = india.append("g")
