@@ -137,7 +137,7 @@ sel.on('change', function() {
 
 function initialize() {
     proj.scale(1400);   
-    proj.translate([-1340, 990]);
+    proj.translate([-1340, 950]);
   }
 
 
