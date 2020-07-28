@@ -3,16 +3,19 @@
 
 <head>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
+<!-- <script src="http://d3js.org/topojson.v1.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 <script src="cluster.js" charset="utf-8"></script>
 <script src="barcharts.js" charset="utf-8"></script>
 <script src="map.js" charset="utf-8"></script>
 </head>
 
 <style>
-  html {
+  /* html {
     background-color: #eee;
-  }
+  } */
 
   #div1 {
     letter-spacing: 2px;
@@ -55,31 +58,7 @@
     pointer-events: none;			
   }
 
-  ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-#india {
+  #india {
       /*    fill: #00BCD4;
       opacity: .7; */
       stroke: #101010;
@@ -103,6 +82,21 @@ li a:hover {
       stroke-width: .4;
     }
 
+    a {
+      background-color: #ddd;
+      font-family: monospace;
+      font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: #aaa;
+  color: black;
+}
+
 
   /* #svg1 {
     
@@ -121,21 +115,36 @@ li a:hover {
     
 </style>
 <body>
-
+<script>
+var l = [barcharts, mapp, showClusters];
+var current = 0;
+function nav(i) {
+  console.log(i)
+  current = (current + i)%3;
+  // console.log(l[ ])
+  l[current]();
+}
+  </script>
+  <hr style="border: 3px solid black;"/>
 <div id="div1">Coronavirus (SARS-CoV-2) in India</div>
+<hr style="border: 3px solid black;"/>
+<br/><br/>
+<div style="text-align: center;">
+<a class="previous" onclick="nav(-1)" >Previous</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a class="next" onclick="nav(1)" >Next</a>
 
-<div>
+</div>
+  
+  <!-- <div>
 <ul>
   <li><a onclick="barcharts()">Confirmed</a></li>
   <li><a onclick="mapp()">Map</a></li>
   <li><a onclick="showClusters()">Cluster</a></li>
 </ul>
-</div>
-
+</div> -->
 
 <div id="div2">
-  <!-- <p id="p2"></p> -->
-  <br/><br/><br/><br/>
 </div>
 
 <script>barcharts()</script>
