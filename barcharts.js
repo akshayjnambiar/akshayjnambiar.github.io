@@ -101,17 +101,12 @@ function barcharts() {
          .attr("stroke", "black")   
          .text(grp);
 
-         g.selectAll(".bar")
+         var bars = g.selectAll(".bar")
          .data(data)
          .enter().append("rect")
          .attr("class", "bar")
          .attr("x", function(d) { return xScale(d.key); })
-         .attr("y", function(d) { return d.value > 0 ? yScale(d.value): yScale(base); })
          .attr("width", 3)
-         .attr("height", function(d) { if(d.value < 0 && linearScale) {
-            return (yScale(base)) - yScale(-1*d.value);;
-         }
-            return  (yScale(base)) - yScale(d.value); })
          .attr("fill", function(d){ return myColor(grp) })
          .on("mouseover", function(d) {		
             div.transition()		
@@ -127,7 +122,18 @@ function barcharts() {
                         .duration(500)		
                         .style("opacity", 0);	  
             })
+            .attr("y", yScale(0))
+            .attr("height", 0)
+            .transition()
+            .duration(400)
+            .attr("y", function(d) { return d.value > 0 ? yScale(d.value): yScale(base); })
+            .attr("height", function(d) { if(d.value < 0 && linearScale) {
+                return (yScale(base)) - yScale(-1*d.value);;
+             }
+                return  (yScale(base)) - yScale(d.value); })
          ;
+
+         bars.transition().duration(250)
          
     }
     console.log("d3.select('#selectButton1') : " + sel);
