@@ -14,16 +14,16 @@ function showClusters() {
       <tr>
         <td>
       <svg height="10" width="10">
-        <circle cx=5 cy=5 r="400" stroke="#000" stroke-width="1" fill="#11aa11" />
+        <circle cx=5 cy=5 r="400" stroke="#000" stroke-width="1" fill="#ff0000" />
       </svg> </td>
-      <td><span>Recovered</span></td>
+      <td><span>Confirmed/Hospitalised</span></td>
       </tr>
       <tr>
         <td>
       <svg height="10" width="10">
-        <circle cx=5 cy=5 r="400" stroke="#000" stroke-width="1" fill="#ff0000" />
+        <circle cx=5 cy=5 r="400" stroke="#000" stroke-width="1" fill="#11aa11" />
       </svg> </td>
-      <td><span>Confirmed/Hospitalised</span></td>
+      <td><span>Recovered</span></td>
       </tr>
       <tr>
         <td>
@@ -36,7 +36,11 @@ function showClusters() {
 </fieldset>
 <svg id="svg1"></svg>`)
 
-d3.select("#p2").text("All the clusters in India as of July 08, 2020");
+d3.select("#p2")
+    .style("white-space", "pre-line")
+    .text("The below simulation shows all the clusters as of July 08, 2020.\n " + 
+          "Individual patients without a cluster is omitted. Hover over the nodes for more details.");
+          div2.append("br")
 
     var force = d3.layout.force()
         .size([width, height])

@@ -2,12 +2,17 @@
 function barcharts() {
     var div2 = d3.select("#div2").style("display", "block");
     div2.selectAll("*").remove();
-    div2.append("p").attr("id", "#p2").text("Bar charts");
+    div2.append("br")
+    div2.append("p").attr("id", "#p2")
+    .style("white-space", "pre-line")
+        .text("The bar chart below shows the number of cases in each status('Confirmed', 'Active', 'Recovered' and 'Deceased').\n " + 
+        "The data can be visualized in log and linear scale. The bar with the highest value is annotated.");
 
+        div2.append("br")
     var d1;
     var allGroup = ["Confirmed", "Active", "Recovered", "Deceased"]
     var sel = div2.append('div').attr("id", "#selectDiv1")
-    .append("p").text("Graph : ")
+    .append("p").text("Status : ")
     .append("select").attr("id", "#selectButton")
 
     var selScale = div2.append('div').attr("id", "#selectDiv2")
