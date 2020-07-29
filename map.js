@@ -12,9 +12,12 @@ function mapp() {
 
     var div2 = d3.select("#div2").style("display", "block");
     div2.selectAll("*").remove();
-    div2.append("p").attr("id", "#p2").text("Map chart");
+    div2.append("p").attr("id", "#p2")
+        .style("white-space", "pre-line")
+        .text("The Map below shows the number of cases in each state in India based on status('Confirmed', 'Active', 'Recovered' and 'Deceased').\n " + 
+        "The value increases as the color gets darker. The state with the highest value is annotated.");
 
-
+        div2.append("br")
     var allGroup = ["confirmed", "active", "recovered", "deceased"]
     var allColors = {
         "confirmed": ["#fff5f0", "#fee0d3", "#fdc3ac", "#fca082", "#fb7c5c", "#f5553d", "#e23028", "#c2181c", "#9b0d14", "#67000d"],
@@ -23,7 +26,7 @@ function mapp() {
         "deceased": ["#ffffff", "#f1f1f1", "#dedede", "#c6c6c6", "#a7a7a7", "#878787", "#686868", "#474747", "#222222", "#000000"]
     }
     var sel = div2.append('div').attr("id", "#selectDiv1")
-        .append("p").text("Graph : ")
+        .append("p").text("Status : ")
         .append("select").attr("id", "#selectButton")
 
     sel.selectAll('myOptions')

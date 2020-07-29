@@ -3,21 +3,12 @@
 
 <head>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<!-- <script src="d3.min.js" charset="utf-8"></script>
-<script src="d3.geo.min.js" charset="utf-8"></script> -->
-<!-- <script src="http://d3js.org/topojson.v1.min.js"></script> -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 <script src="cluster.js" charset="utf-8"></script>
 <script src="barcharts.js" charset="utf-8"></script>
 <script src="map.js" charset="utf-8"></script>
 </head>
 
 <style>
-  /* html {
-    background-color: #eee;
-  } */
 
   #div1 {
     letter-spacing: 2px;
@@ -33,6 +24,7 @@
     padding: 20px;
     border: 10px;
     display: none;
+    background-color: #fafafa;
   }
 
   .node {
@@ -49,9 +41,6 @@
 
   div.tooltip {	
     position: absolute;			
-    /* text-align: center;			 */
-    /* width: 60px;					
-    height: 28px;					 */ 
     padding: 10px;				
     font: 14px sans-serif;		
     background: #9ecae1;	
@@ -62,9 +51,6 @@
 
   div.tooltip1 {	
     position: absolute;			
-    /* text-align: center;			 */
-    /* width: 60px;					
-    height: 28px;					 */ 
     padding: 10px;				
     font: 14px sans-serif;		
     background: #9ecae1;	
@@ -144,10 +130,20 @@ function nav(i) {
 <div id="div1">Coronavirus (SARS-CoV-2) in India</div>
 <hr style="border: 3px solid black;"/>
 <br/><br/>
-<div style="text-align: center;">
-<a class="previous" onclick="nav(-1)" >Previous</a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a class="next" onclick="nav(1)" >Next</a>
+<div style="margin-left: 90px;font: 18px sans-serif;">
+  <p>Coronavirus has been affecting the world since December 2019. This interactive slideshow is to show how the virus affects India. </p>
+  <p>This slideshow contains 3 slides : </p>
+  <ul>
+    <li>Bar charts on daily data.</li>
+    <li>State-wise data represented on a map.</li>
+    <li>Patient clusters.</li>
+  </ul>
+  </div>
+  <br/><br/>
+<div style="text-align: center;font: 18px sans-serif;">
+  <a class="previous" onclick="nav(-1)" >Previous</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="next" onclick="nav(1)" >Next</a>
 
 </div>
   
