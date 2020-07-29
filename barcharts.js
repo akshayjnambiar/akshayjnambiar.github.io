@@ -1,7 +1,6 @@
 function barcharts() {
   var div2 = d3.select("#div2").style("display", "block");
   div2.selectAll("*").remove();
-  div2.append("br");
   div2
     .append("p")
     .attr("id", "#p2")

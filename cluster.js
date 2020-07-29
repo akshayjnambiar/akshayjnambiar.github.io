@@ -42,7 +42,7 @@ function showClusters() {
       "The below simulation shows all the clusters as of July 08, 2020.\n " +
         "Individual patients without a cluster is omitted. Hover over the nodes for more details."
     );
-  div2.append("br");
+  d3.select("#div2").append("br");
 
   var force = d3.layout
     .force()
