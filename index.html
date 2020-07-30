@@ -123,6 +123,17 @@ function nav(i) {
   console.log(i)
   current = (current + i)%3;
   // console.log(l[ ])
+  if(current == 0) {
+    d3.select("#previous").style("opacity", "0")
+  }else {
+    d3.select("#previous").style("opacity", "1")
+  }
+
+  if(current == 2) {
+    d3.select("#next").style("opacity", "0")
+  }else {
+    d3.select("#next").style("opacity", "1")
+  }
   l[current]();
 }
   </script>
@@ -141,9 +152,9 @@ function nav(i) {
   </div>
   <br/><br/>
 <div style="text-align: center;font: 18px sans-serif;">
-  <a class="previous" onclick="nav(-1)" >Previous</a>
+  <a id="previous" onclick="nav(-1)" style="opacity: 0;" >Previous</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a class="next" onclick="nav(1)" >Next</a>
+  <a id="next" onclick="nav(1)" >Next</a>
 
 </div>
   

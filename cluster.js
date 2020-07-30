@@ -16,7 +16,7 @@ function showClusters() {
       <svg height="10" width="10">
         <circle cx=5 cy=5 r="400" stroke="#000" stroke-width="1" fill="#ff0000" />
       </svg> </td>
-      <td><span>Confirmed/Hospitalised</span></td>
+      <td><span>Active/Hospitalised</span></td>
       </tr>
       <tr>
         <td>
@@ -88,15 +88,12 @@ function showClusters() {
     console.log(links);
     force.nodes(nodes).links(links).start();
 
-    // Update the links…
     link = link.data(links, function (d) {
       return d.source.index;
     });
 
-    // Exit any old links.
     link.exit().remove();
 
-    // Enter any new links.
     link
       .enter()
       .insert("line", ".node")
@@ -114,17 +111,14 @@ function showClusters() {
         return d.target.y;
       });
 
-    // Update the nodes…
     node = node
       .data(nodes, function (d) {
         return d.patientnumber;
       })
       .style("fill", color);
 
-    // Exit any old nodes.
     node.exit().remove();
 
-    // Enter any new nodes.
     node
       .enter()
       .append("circle")
@@ -201,18 +195,16 @@ function showClusters() {
       });
   }
 
-  // Color leaf nodes orange, and packages white or blue.
   function color(d) {
     if (d.currentstatus == "Recovered") {
       return "#11aa11";
     }
     if (d.currentstatus == "Hospitalized") {
-      return "#ff0000";
+      return "#1111ee";
     }
     if (d.currentstatus == "Deceased") return "#000";
   }
 
-  // Returns a list of all nodes under the root.
   function flatten(root) {
     var nodes = [],
       i = 0;
