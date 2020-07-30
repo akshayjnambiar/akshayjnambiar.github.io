@@ -39,8 +39,9 @@ function showClusters() {
   d3.select("#p2")
     .style("white-space", "pre-line")
     .text(
-      "The below simulation shows all the clusters as of July 08, 2020.\n " +
-        "Individual patients without a cluster is omitted. Hover over the nodes for more details."
+      "The below simulation shows all the clusters as of July 08, 2020. This shows the current level of transmission in the country.\n " +
+      "We can see that there are many clusters and they are large. So the local transmission is high in some areas.\n" + 
+      "Individual patients without a cluster is omitted. Hover over the nodes for more details."
     );
   d3.select("#div2").append("br");
 

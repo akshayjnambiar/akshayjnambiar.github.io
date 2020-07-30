@@ -6,8 +6,9 @@ function barcharts() {
     .attr("id", "#p2")
     .style("white-space", "pre-line")
     .text(
-      "The bar chart below shows the number of cases in each status('Confirmed', 'Active', 'Recovered' and 'Deceased').\n " +
-      "The data can be visualized in log and linear scale. The bar with the highest value is annotated. \nHover over the bars for more details."
+      "The bar chart below shows the number of daily cases in the country in different statuses.\n " + 
+      "The 'Confirmed' status shows the overall statistics. This status is then divided into 'Active'(currently affected), 'Recovered' and 'Deceased'.\n " +
+      "The data can be visualized in linear and log scale. The bar with the highest value is annotated. \nHover over the bars for more details. \n"
     );
 
   div2.append("br");

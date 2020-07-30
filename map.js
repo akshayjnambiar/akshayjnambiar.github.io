@@ -25,8 +25,10 @@ function mapp() {
     .attr("id", "#p2")
     .style("white-space", "pre-line")
     .text(
-      "The Map below shows the number of cases in each state in India based on status('Confirmed', 'Active', 'Recovered' and 'Deceased').\n " +
-        "The value increases as the color gets darker. The state with the highest value is annotated. \nHover over the states for more details."
+      "The Map below shows the effect of the disease in a state level. This shows which part of the country is affected more. \n"  +
+      "We can see that Maharashtra is the most affected state. \n" + 
+      "The Map is based on the number of cases in each state in India based on status('Confirmed', 'Active', 'Recovered' and 'Deceased') mentioned earlier.\n " +
+      "The value increases as the color gets darker. The state with the highest value is annotated. \nHover over the states for more details."
     );
 
   div2.append("br");
